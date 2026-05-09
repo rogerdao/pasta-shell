@@ -1,4 +1,4 @@
-Assignment 2, Experimental Shell
+CS 480, Experimental Shell
 
 Collaborators:
 xxxxx yyyyy - cssc1416
