@@ -1,6 +1,6 @@
 CS 480, Experimental Shell
 
-Collaborators:
+Collaborators:  
 xxxxx yyyyy - cssc1416  
 xxxxx yyyyy - cssc1420
 
