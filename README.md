@@ -1,7 +1,7 @@
 CS 480, Experimental Shell
 
 Collaborators:
-xxxxx yyyyy - cssc1416
+xxxxx yyyyy - cssc1416  
 xxxxx yyyyy - cssc1420
 
 DESCRIPTION
@@ -33,34 +33,34 @@ Valid Input Formats:
 
 DESIGN DECISIONS
 
-System Call Usage:
-Process Creation: Uses fork() to create child processes
-Program Execution: Uses execv() for full paths and execvp() for PATH searches
-Inter-Process Communication: Uses pipe() and dup2() for command chaining
+System Call Usage:  
+Process Creation: Uses fork() to create child processes  
+Program Execution: Uses execv() for full paths and execvp() for PATH searches  
+Inter-Process Communication: Uses pipe() and dup2() for command chaining  
 Process Synchronization: Uses waitpid() and wait() for proper child process cleanup
 
-Process Management Strategy:
-Single Commands: Standard fork/exec pattern for execution
-Error Handling: Provides messages for invalid or missing executables
-Pipeline Execution: Multiple processes are connected through pipes
+Process Management Strategy:  
+Single Commands: Standard fork/exec pattern for execution  
+Error Handling: Provides messages for invalid or missing executables  
+Pipeline Execution: Multiple processes are connected through pipes  
 File Descriptors: Setup and cleanup of pipes to avoid deadlocks
 
-Tokenizing/Parsing:
-Parsing: Character by character parsing using a simple state machine
-Whitespaces: Handles multiple spaces and tabs between arguments
-Quote Handling: Supports both single and double quoted arguments
+Tokenizing/Parsing:  
+Parsing: Character by character parsing using a simple state machine  
+Whitespaces: Handles multiple spaces and tabs between arguments  
+Quote Handling: Supports both single and double quoted arguments  
 Escape Characters: Handles backslashes for special characters
 
-Environment Variable Integration:
-Fallback Strategy: Defaults to "cssc0000%" if no environment variables are found
+Environment Variable Integration:  
+Fallback Strategy: Defaults to "cssc0000%" if no environment variables are found  
 Username Detection: Checks USER environment variable first, then LOGNAME as fallback if needed
 
-Output:
-Command execution output displayed to terminal
+Output:  
+Command execution output displayed to terminal  
 Error messages for invalid or non-existent commands
 
-Code Architecture:
-Focused Tasks: Parsing, execution, and environment handling separated into dedicated functions
+Code Architecture:  
+Focused Tasks: Parsing, execution, and environment handling separated into dedicated functions  
 Modular Design: Main function kept short as a list of function calls
 
 Known Deficiencies/Bugs:
