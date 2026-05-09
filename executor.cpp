@@ -54,7 +54,7 @@ void execute_commands(const std::vector<std::string>& command_parts) {
         return;
     }
     
-    // Handle multiple commands with pipes (your original approach but simplified)
+    // Handle multiple commands with pipes
     int in_fd = 0;      // Input file descriptor
     int pipefd[2];      // Pipe file descriptors
     pid_t pid;
